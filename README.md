@@ -1,20 +1,38 @@
 # Masterclass 2022 - software
 
-In this repository we report a brief guide on how to install the software needed for PLUMED Masterclass 2022.
-Notice that different masterclass might require different software versions.
+In this repository we report a brief guide on how to install the software needed for PLUMED Masterclass, 2022 series.
+Notice that different Masterclasses might require different software versions.
 Our recommendation is to use conda. Unfortunately we can only provide precompiled conda packages for x64 architecture, Linux and MacOS.
-This means that if you want to run the exercise on a different architecture you should install the software on your own.
+This means that if you want to run the exercise on a different architecture (e.g., a new Mac with a ARM processor) you should install the software on your own.
 
-A basic installation with plumed 2.7.3 and all contributed modules enabled, plus gromacs 2020.6, both compiled with MPI, can be done with the following commands:
+First, make sure conda is installed by typing:
+```
+conda
+```
+If the command is not found, please refer to these [instructions to install conda on your machine](https://docs.conda.io/en/latest/miniconda.html).
+Alternatively, if you use the [Homebrew package manager](https://brew.sh/), you can install conda with:
+```
+brew install --cask anaconda
+# add this line to your .bashrc
+export PATH="/usr/local/anaconda3/bin:$PATH"
+```
+
+Now we can create a conda environment for the PLUMED Masterclass:
 ```
 conda create --name plumed-masterclass-2022
-source activate plumed-masterclass-2022
+```
+
+and activate it with:
+```
+conda activate plumed-masterclass-2022
+```
+
+Finally, we can proceed with the installation of the required software:
+```
 # install some basic analysis tool and the default plumed version
 conda install -c conda-forge plumed py-plumed numpy pandas matplotlib notebook mdtraj mdanalysis git
-# install plumed 2.7.3 with MPI and all modules enabled
-conda install --strict-channel-priority -c plumed/label/masterclass-2022 -c conda-forge plumed
-# install gromacs 2020.6 with MPI and patched with PLUMED
-conda install --strict-channel-priority -c plumed/label/masterclass-2022 -c conda-forge gromacs
+# install plumed 2.7.3 and gromacs 2020.6 with MPI and all modules enabled
+conda install --strict-channel-priority -c plumed/label/masterclass-2022 -c conda-forge plumed gromacs
 ```
 
 Conda will install a number of packages.
@@ -53,3 +71,6 @@ On MacOS, for instance, you should see something similar to this:
   zstd               conda-forge/osx-64::zstd-1.5.2-h582d3a0_0
 ```
  Make sure that `gromacs` and `plumed` packages are installed from `plumed/label/masterclass-2022`.
+ 
+ **Do not forget to activate the plumed-masterclass-2022 environment every time you open a new terminal/shell.**
+
