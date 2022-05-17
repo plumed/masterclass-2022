@@ -40,17 +40,17 @@ On MacOS, for instance, you should see something similar to this:
 ```
 The following NEW packages will be INSTALLED:
 
-  boost-cpp          conda-forge/osx-64::boost-cpp-1.77.0-hf3dc895_1
+  boost-cpp          conda-forge/osx-64::boost-cpp-1.79.0-h8b082ac_0
   gromacs            plumed/label/masterclass-2022/osx-64::gromacs-2020.6-h75233e6_1
-  icu                conda-forge/osx-64::icu-69.1-he49afe7_0
+  icu                conda-forge/osx-64::icu-70.1-h96cf925_0
   libhwloc           conda-forge/osx-64::libhwloc-1.11.13-hc10311c_0
-  libxml2            conda-forge/osx-64::libxml2-2.9.12-h7e28ab6_1
+  libxml2            conda-forge/osx-64::libxml2-2.9.14-h08a9926_0
   mpi                conda-forge/osx-64::mpi-1.0-openmpi
-  openmpi            conda-forge/osx-64::openmpi-4.1.2-hd3cd54c_0
+  openmpi            conda-forge/osx-64::openmpi-4.1.3-hd33e60e_103
 
 The following packages will be SUPERSEDED by a higher-priority channel:
 
-  plumed             conda-forge::plumed-2.8.0-nompi_h3651~ --> plumed/label/masterclass-2022::plumed-2.8.0-h75233e6_0
+  plumed             conda-forge::plumed-2.8.0-nompi_h3651~ --> plumed/label/masterclass-2022::plumed-2.8.0-h75233e6_1
 ```
  Make sure that `gromacs` and `plumed` packages are installed from `plumed/label/masterclass-2022`.
  
