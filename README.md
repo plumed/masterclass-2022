@@ -55,4 +55,15 @@ The following packages will be SUPERSEDED by a higher-priority channel:
  Make sure that `gromacs` and `plumed` packages are installed from `plumed/label/masterclass-2022`.
  
  **Do not forget to activate the plumed-masterclass-2022 environment every time you open a new terminal/shell.**
+ 
+ Notice that with some outdated conda version you might receive an error due to the fact that conda confuses python 3.1 with python 3.10.
+ If you find an error like this one:
+ ```
+ PackagesNotFoundError: The following packages are not available from current channels:
+
+  - python=3.1
+
+ ```
+ Make sure that you have at least conda 4.11.0 (or update conda with `conda update conda`).
+ More at [this link](https://github.com/conda/conda/issues/11065)
 
