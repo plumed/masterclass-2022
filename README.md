@@ -31,8 +31,16 @@ Finally, we can proceed with the installation of the required software:
 ```
 # install some basic analysis tool and the default plumed version
 conda install -c conda-forge plumed py-plumed numpy pandas matplotlib notebook mdtraj mdanalysis git
+```
+If the Masterclass requires Gromacs, you can then run the following command:
+```
 # install plumed 2.8.0 and gromacs 2020.6 with MPI and all modules enabled
 conda install --strict-channel-priority -c plumed/label/masterclass-2022 -c conda-forge plumed gromacs
+```
+If the Masterclass requires LAMMPS instead (for instance, Masterclass 22.12), the appropriate command is:
+```
+# install plumed 2.8.0 and lammps 23 Jun 2022 with MPI and all modules enabled
+conda install --strict-channel-priority -c plumed/label/masterclass-2022 -c conda-forge plumed lammps
 ```
 
 Conda will install a number of packages.
