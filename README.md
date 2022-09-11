@@ -42,6 +42,20 @@ If the Masterclass requires LAMMPS instead (for instance, Masterclass 22.12), th
 # install plumed 2.8.0 and lammps 23 Jun 2022 with MPI and all modules enabled
 conda install --strict-channel-priority -c plumed/label/masterclass-2022 -c conda-forge plumed lammps
 ```
+If the Masterclass requires AMBER (for instance, Masterclass 22.13), you should first create a separate AMBER environment:
+```
+# create a separate AMBER environment and install AMBER
+conda create --name plumed-masterclass-2022-amber
+conda activate plumed-masterclass-2022-amber
+conda install -c conda-forge ambertools
+```
+And you should then stack the PLUMED and AMBER environments:
+```
+# stack the PLUMED and AMBER environments
+conda activate plumed-masterclass-2022
+conda activate --stack plumed-masterclass-2022-amber
+export PLUMED_KERNEL=/your_path_here/plumed-masterclass-2022/lib/libplumedKernel.so
+```
 
 Conda will install a number of packages.
 On MacOS, for instance, you should see something similar to this:
